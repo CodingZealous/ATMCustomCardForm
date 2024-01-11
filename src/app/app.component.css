@@ -1,0 +1,178 @@
+
+.bg-color{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    gap:30px;
+  }
+  .content-alignment{
+    display: flex;
+    flex-direction: column;
+  }
+  .cards-align{
+    display: flex;
+    flex-direction: row;
+   
+  }
+  .f-gap{
+    gap:20px
+  }
+  .card-frontAlign{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 19px;
+  } 
+  .card-container {
+    position: absolute;
+    color: #FFA500;
+    width: 100%;
+  }  
+  .flip-card {
+    background-color: transparent;
+    width: 400px;
+    height: 290px;
+    perspective: 1000px;
+    
+  } 
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 15px
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 15px
+  }
+  
+  .flip-card-front {
+    background-image: url('../assets/images/bgcolor1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .flip-card-back {
+    transform: rotateY(180deg);
+      background-image: url('../assets/images/bgcolor1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .bank_icon{
+      width: 49px;
+      height: 51px;
+      margin: 10px 0px 0px 0px;
+  }
+  
+  .bank_icon_align{
+    position: absolute;
+    left:46%;
+    width: 49px;height: 51px;
+  }
+  .card-logoAlign{ 
+    display: flex;
+    flex-direction: row;
+    padding: 0px 0px 0px 0px;
+    rotate: 20deg;
+  }
+  .valid-info{
+    float: left;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 2rem;
+    margin-left: 31px;
+    height: 3px;
+  }
+  .valid-Date{
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+    align-items: center;
+  }
+  .valid-text{
+    font-size: 10px; 
+    width: 2px;
+  }
+  .card-holder{
+    display: flex;
+    flex-direction: row;
+    font-weight: 900;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 76px;
+  }
+  .card-align{
+    display: flex;
+    margin-left: 35px;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 30px;
+  }
+
+  .form-control{
+    padding: 10px;
+    outline: none;
+    width: 100%;
+  }
+  .credit-form{
+    background-image: url('../assets/images/bgcolor1.jpg');
+    background-repeat: no-repeat;
+    color: #FFA500;
+    border: 1px solid black;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .crad-visa{
+    position: absolute;
+    top: 78%;
+    left: 70%;
+  }
+  .card-back{
+    display: flex;
+     flex-direction: row;
+    justify-content: space-between
+  }
+  .card-bankAlign{
+    padding: 1.3rem 10rem;
+    background: black;
+  }
+
+  .pt-5{
+    padding: 0.5rem
+  }
+  .card-back-contentAlign{
+    display: inline-flex;
+    flex-direction: column;
+  }
+.card_cvv_disbaled{
+  padding: 0.3rem 0rem;
+  background: gray;
+  width: 80%;
+}
+.card_cVV_enabled{
+  padding: 0.3rem 0rem;
+  background: white;width: 20%;
+  font-size: 27px;
+  color: black;
+}

@@ -1,0 +1,98 @@
+  
+  <div class="bg-color">
+
+    <!-- form -->
+  <div class="credit-form">
+  <h2 style="text-align: center">Form Filling</h2>
+  <div>
+    <label for="accountNum">Account Number:</label><br>
+    <input type="text" class="form-control" id="accountNum" name="accountNum" [(ngModel)]="accountNum"
+    minlength="19" maxlength="19" (keypress)="onKeypressEvent($event)"
+    ><br>
+  </div><br>
+  <div>
+    <label for="cardName">Card Holder Name:</label><br>
+    <input type="text" class="form-control" id="cardName" name="cardName" [(ngModel)]="cardName"><br>
+  </div><br>
+  <div>
+    <label for="startDate">Start Date:</label><br>
+    <input type="month" class="form-control" id="startDate" name="startDate" [(ngModel)]="startDate"><br>
+  </div><br>
+  <div>
+    <label for="expDate">Expiray Date:</label><br>
+    <input type="month" class="form-control" id="expDate" name="expDate" [(ngModel)]="expDate"><br>
+  </div><br>
+  <div>
+    <label for="generateCVV">Generate CVV:</label><br>
+    <input type="text" class="form-control" id="generateCVV" minlength="3" maxlength="3" name="generateCVV" [(ngModel)]="generateCVV"><br>
+  </div><br>
+  </div>
+
+  <!-- card -->
+      <div class="cards-align f-gap">
+          <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <div class="card-container">
+                    <div class="content-alignment">
+                    <div class="card-frontAlign">
+                      <h3>DEBIT CARD</h3>
+                      <div class="card-frontAlign">
+                        <div class="card-logoAlign">
+                          <img src="../assets/images/Commonwealth-Bank-Symbol.png" class="bank_icon" alt="bankicon" style="width: 49px;height: 51px;" >
+                          <img class="bank_icon_align" src="../assets/images/Commonwealth-Bank-Symbol.png" alt="bankicon" style="width: 49px;height: 51px;" >
+                        </div>   
+                        <h3 id="bankName">XYZ BANK</h3>
+                      </div>   
+                    </div>
+                     <div class="card-frontAlign" style="gap: 5rem;margin:1rem">
+                      <img src="../assets/images/chip.png" width="70px" height="60px" >
+                      <img src="../assets/images/contactless" width="97px" height="60px">
+                    </div>
+                    <div class="card-frontAlign card-align">
+                      <h2>{{accountNum}}</h2>
+                    </div><br>
+                    <div class="valid-info">
+                      <div class="valid-Date">
+                        <div class="valid-text">VALID FROM</div>
+                        <h2 style="font-size: 20px;">{{startDate | date : "MM/YY"}}</h2>
+                      </div>
+                       <div class="valid-Date">
+                        <div class="valid-text">VALID TO</div>
+                        <h3 style="font-size: 20px;">{{expDate | date : "MM/YY"}}</h3>
+                       </div>
+                    </div>
+                    <div class="card-holder">
+                    <div style="font-size: 22px;">{{cardName}}</div>
+                    <div>
+                      <img class="crad-visa" src="../assets/images/visa1.png" width="90px" height="40px">
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                </div>
+                <div class="flip-card-back">
+                  <div class="card-container" style="margin-top: 1rem;">
+                  <div class="pt-5">Customer Service: +12347376575458</div>
+                  <div class="card-back-contentAlign">
+                    <span class="card-bankAlign"></span>
+                    <div class="card-back">
+                      <div>Authorized Signature</div>
+                      <div>Not Valid Unless Signed</div>
+                  </div>
+                    <div class="cards-align" style="height: 35px">
+                      <span class="card_cvv_disbaled"></span>
+                      <span class="card_cVV_enabled">{{generateCVV}}</span>
+                    </div><br>
+                     <div style="width: 300px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+                      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+                      nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                  </div>
+                  </div> 
+                </div>
+              </div>
+            </div>
+      </div>
+    </div>
+   
+ 
